@@ -107,3 +107,14 @@ function transformAnalysisData(rawData: any): AnalysisData | null {
     return null
   }
 }
+
+export async function loadInjuryData(): Promise<any> {
+  try {
+    const dataPath = join(process.cwd(), "public/data/injury_report.json")
+    const fileContent = await readFile(dataPath, "utf-8")
+    return JSON.parse(fileContent)
+  } catch (error) {
+    console.warn("Could not load injury data from file:", error)
+    return { advisory: { high_impact: [] } }
+  }
+}

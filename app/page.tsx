@@ -6,19 +6,7 @@ import { ModelExplanationModal } from "@/components/model-explanation-modal"
 import { InjuriesModal } from "@/components/injuries-modal"
 import { TrendingUpIcon, TargetIcon, CalendarIcon, ActivityIcon, Github, BookOpen } from "lucide-react"
 import { analysisData } from "@/lib/sample-data"
-import { loadAnalysisData } from "@/lib/data-loader"
-
-async function loadInjuryData() {
-  try {
-    const response = await fetch(new URL('public/data/injury_report.json', process.env.VERCEL_URL || 'http://localhost:3000').toString())
-    if (response.ok) {
-      return await response.json()
-    }
-  } catch (e) {
-    console.warn("Could not load injury data:", e)
-  }
-  return { advisory: { high_impact: [] } }
-}
+import { loadAnalysisData, loadInjuryData } from "@/lib/data-loader"
 
 export default async function Home() {
   // Load actual data from generated JSON files, fallback to sample data
