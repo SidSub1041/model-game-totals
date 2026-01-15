@@ -1,9 +1,10 @@
 import { GameCard } from "@/components/game-card"
 import { StatsCard } from "@/components/stats-card"
 import { ModelMetrics } from "@/components/model-metrics"
-import { PlayoffBranding } from "@/components/playoff-branding"
 import { InjuryAlert } from "@/components/injury-alert"
-import { TrendingUpIcon, TargetIcon, CalendarIcon, ActivityIcon } from "lucide-react"
+import { ModelExplanationModal } from "@/components/model-explanation-modal"
+import { InjuriesModal } from "@/components/injuries-modal"
+import { TrendingUpIcon, TargetIcon, CalendarIcon, ActivityIcon, Github, BookOpen } from "lucide-react"
 import { analysisData } from "@/lib/sample-data"
 import { loadAnalysisData } from "@/lib/data-loader"
 
@@ -45,50 +46,25 @@ export default async function Home() {
   })
   
   return (
-    <main className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-400 via-purple-400 to-pink-300">
-      {/* Vibrant background with animated pattern */}
-      <div 
-        className="fixed inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-400 z-0"
-        style={{
-          background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 25%, #ec4899 50%, #f97316 75%, #eab308 100%)',
-          animation: 'gradientShift 15s ease infinite',
-          backgroundSize: '200% 200%'
-        }}
-      >
-        {/* Overlay for depth - semi-transparent white */}
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
-        
-        {/* Accent circles for dynamic look */}
-        <div className="absolute top-10 left-10 w-64 h-64 bg-blue-300 rounded-full opacity-20 blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-pink-300 rounded-full opacity-20 blur-3xl" />
-        <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-purple-300 rounded-full opacity-20 blur-3xl" />
-      </div>
-
-      {/* Playoff Branding - Logos and Bracket */}
-      <PlayoffBranding />
-
-      {/* Animated background decorations */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden z-5">
-        <div className="absolute top-10 left-10 text-8xl opacity-5 animate-bounce">🏈</div>
-        <div className="absolute top-40 right-20 text-7xl opacity-5 animate-pulse">🏈</div>
-        <div className="absolute bottom-32 left-1/4 text-6xl opacity-5">🏈</div>
-        <div className="absolute bottom-16 right-1/3 text-7xl opacity-5 animate-bounce" style={{ animationDelay: "1s" }}>🏈</div>
-        <div className="absolute top-1/3 right-10 text-5xl opacity-5">⭐</div>
-        <div className="absolute bottom-40 left-32 text-6xl opacity-5">⭐</div>
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+      {/* Subtle animated background pattern */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+        <div className="absolute -bottom-8 right-1/4 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-8 relative z-10">
         {/* Header */}
-        <div className="mb-10">
+        <div className="mb-12">
           <div className="inline-block mb-4">
-            <div className="flex items-center gap-3 bg-gradient-to-r from-orange-500 to-red-600 px-6 py-3 rounded-full shadow-xl hover:shadow-2xl transition">
+            <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-lg shadow-sm border border-slate-200">
               <span className="text-3xl">🏈</span>
-              <h1 className="text-3xl font-black text-white">NFL Game Totals Analysis</h1>
+              <h1 className="text-3xl font-light text-slate-900" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>NFL Game Predictions</h1>
             </div>
           </div>
-          <p className="text-lg font-bold text-white drop-shadow-lg mt-4">{playoffWeekend || `Divisional Round ${season + 1}`}</p>
-          <p className="text-sm text-white drop-shadow-md mt-1">Model vs Vegas Projections • Data from nflfastR • Updated {formattedDate}</p>
-          <p className="text-xs text-white/70 drop-shadow-md mt-3 italic">Designed by Sid Subramanian</p>
+          <p className="text-lg font-light text-slate-700 mt-4">{playoffWeekend || `Divisional Round ${season + 1}`}</p>
+          <p className="text-sm text-slate-600 mt-1">Data from nflfastR • Vegas Lines from The-Odds-API • Updated {formattedDate}</p>
+          <p className="text-xs text-slate-500 mt-3 italic">Designed by Sid Subramanian</p>
         </div>
 
         {/* Injury Alert */}
@@ -136,9 +112,9 @@ export default async function Home() {
 
         {/* Games Grid */}
         <div className="mb-8">
-          <h2 className="text-2xl font-black text-white mb-6 flex items-center gap-3">
-            <span className="text-4xl">🎯</span>
-            Game Projections
+          <h2 className="text-2xl font-semibold text-slate-900 mb-6 flex items-center gap-3">
+            <span className="text-3xl">🎯</span>
+            Divisional Round Predictions
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {games.map((game, index) => (
@@ -167,10 +143,66 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="text-center text-sm text-gray-700 pt-12 border-t-2 border-gray-300 bg-gradient-to-r from-orange-100 to-amber-100 rounded-lg p-6 mt-12">
-          <p className="font-semibold">🏈 Model trained on {season} regular season data using EPA and scoring metrics from nflfastR</p>
-          <p className="mt-2 text-gray-600">Edge threshold: ±2.0 points for recommendations • Live Vegas odds powered by The-Odds-API</p>
+        {/* Footer Info */}
+        <div className="mt-16 pt-8 border-t border-slate-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {/* GitHub Link */}
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition">
+              <div className="flex items-center gap-3 mb-3">
+                <Github size={20} className="text-slate-700" />
+                <h3 className="font-semibold text-slate-900">View on GitHub</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4">
+                Check out the complete source code, data pipeline, and model training code.
+              </p>
+              <a
+                href="https://github.com/SidSub1041/model-game-totals"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm"
+              >
+                github.com/SidSub1041/model-game-totals
+                <span>→</span>
+              </a>
+            </div>
+
+            {/* Model Explanation */}
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition">
+              <div className="flex items-center gap-3 mb-3">
+                <BookOpen size={20} className="text-slate-700" />
+                <h3 className="font-semibold text-slate-900">How It Works</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4">
+                Linear regression model trained on 49K+ plays from nflfastR data with EPA metrics, injury adjustments, and head-to-head records.
+              </p>
+              <ModelExplanationModal />
+            </div>
+
+            {/* Injury Reports */}
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-lg">⚠️</span>
+                <h3 className="font-semibold text-slate-900">Injury Reports</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4">
+                High-impact injuries scraped from ESPN with automated updates each week.
+              </p>
+              <InjuriesModal injuries={highImpactInjuries.map(injury => ({
+                team: injury.team,
+                player: injury.player,
+                position: injury.position,
+                status: injury.status,
+                impact: 'high'
+              }))} />
+            </div>
+          </div>
+
+          {/* Footer bottom */}
+          <div className="text-center py-4 border-t border-slate-200">
+            <p className="text-xs text-slate-500">
+              Last updated: {formattedDate} • <a href="#" className="hover:text-slate-700">Privacy</a> • <a href="#" className="hover:text-slate-700">Contact</a>
+            </p>
+          </div>
         </div>
       </div>
     </main>

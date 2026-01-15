@@ -20,25 +20,25 @@ export function InjuryAlert({ highImpactInjuries = [] }: InjuryAlertProps) {
   }
 
   return (
-    <Alert className="border-l-4 border-l-red-500 bg-red-50 mb-6">
-      <AlertTriangle className="h-4 w-4 text-red-600" />
-      <AlertTitle className="text-red-900 font-bold">⚠️ Key Injuries to Monitor</AlertTitle>
-      <AlertDescription className="text-red-800 mt-2">
+    <Alert className="border-l-4 border-l-rose-600 bg-rose-50 mb-6 border-rose-200">
+      <AlertTriangle className="h-4 w-4 text-rose-700" />
+      <AlertTitle className="text-rose-900 font-semibold">Key Injuries to Monitor</AlertTitle>
+      <AlertDescription className="text-rose-800 mt-2">
         <p className="mb-3 text-sm">
-          The following high-impact injuries may significantly affect team performance:
+          High-impact injuries detected for playoff games:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {highImpactInjuries.map((injury, idx) => (
-            <div key={idx} className="bg-white/50 p-2 rounded border border-red-200">
-              <p className="font-semibold text-sm">{injury.player}</p>
-              <p className="text-xs text-gray-700">
+            <div key={idx} className="bg-white p-2 rounded border border-rose-200">
+              <p className="font-semibold text-sm text-slate-900">{injury.player}</p>
+              <p className="text-xs text-slate-600">
                 {injury.team} • {injury.position} • {injury.status}
               </p>
             </div>
           ))}
         </div>
-        <p className="text-xs text-red-700 mt-3 italic">
-          Consider these injuries when interpreting model predictions. Check ESPN.com/nfl/injuries for real-time updates.
+        <p className="text-xs text-rose-700 mt-3">
+          For real-time updates, check <a href="https://www.espn.com/nfl/injuries" target="_blank" rel="noopener noreferrer" className="underline hover:text-rose-900">ESPN.com/nfl/injuries</a>
         </p>
       </AlertDescription>
     </Alert>

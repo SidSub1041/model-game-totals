@@ -44,7 +44,15 @@ team_stats = enhanced_data['team_stats']
 for game in current_analysis['games']:
     away_team = game['awayAbbr']
     home_team = game['homeAbbr']
+    
+    # Use actual game total as target (not Vegas line!)
+    actual_total = game.get('homeScore', 0) + game.get('awayScore', 0)
     vegas_total = game['vegasTotal']
+    
+    # Skip if no actual game data available
+    if actual_total == 0:
+        print(f"  ⚠ Skipping {game['awayTeam']} @ {game['homeTeam']}: No actual game scores")
+        continue
     
     # Extract features
     away_stats = team_stats.get(away_team, {})
@@ -85,7 +93,7 @@ for game in current_analysis['games']:
             features['home_injury_factor'] *= 0.85
     
     features_list.append(features)
-    targets.append(vegas_total)
+    targets.append(actual_total)
 
 # Convert to DataFrame
 features_df = pd.DataFrame(features_list)

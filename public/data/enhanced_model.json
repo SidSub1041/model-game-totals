@@ -1,53 +1,53 @@
 {
-  "generated_at": "2026-01-15T16:15:02.745014",
+  "generated_at": "2026-01-15T16:23:32.127237",
   "model_type": "Enhanced Linear Regression",
   "features": 16,
   "training_samples": 4,
   "metrics": {
     "r2_score": 1.0,
-    "mae": 0.0,
-    "rmse": 0.0
+    "mae": 8.881784197001252e-15,
+    "rmse": 1.0658141036401503e-14
   },
   "top_features": [
     {
-      "feature": "away_injury_factor",
-      "coefficient": 0.500398577231962
-    },
-    {
-      "feature": "home_injury_factor",
-      "coefficient": 0.500398577231962
-    },
-    {
-      "feature": "away_pass_yards",
-      "coefficient": 0.4791882008919874
-    },
-    {
-      "feature": "away_rush_yards",
-      "coefficient": 0.46199154700500333
+      "feature": "away_off_epa",
+      "coefficient": 0.8463307569501333
     },
     {
       "feature": "home_rush_yards",
-      "coefficient": 0.41239440791831355
+      "coefficient": 0.8202357387025256
     },
     {
-      "feature": "away_turnovers",
-      "coefficient": 0.3615332990699173
+      "feature": "away_pass_epa",
+      "coefficient": 0.8099535190877027
     },
     {
-      "feature": "home_turnovers",
-      "coefficient": 0.354398533189813
+      "feature": "home_off_epa",
+      "coefficient": 0.6898828130530574
+    },
+    {
+      "feature": "home_def_epa",
+      "coefficient": 0.6765069911493453
+    },
+    {
+      "feature": "home_pass_epa",
+      "coefficient": 0.6218390592603658
     },
     {
       "feature": "away_rush_epa",
-      "coefficient": 0.2959026261870662
+      "coefficient": 0.592455289074584
     },
     {
-      "feature": "away_def_epa",
-      "coefficient": 0.2888801772298869
+      "feature": "away_rush_yards",
+      "coefficient": 0.5681794279005113
     },
     {
       "feature": "home_rush_epa",
-      "coefficient": 0.26466623091449826
+      "coefficient": 0.5640642036003921
+    },
+    {
+      "feature": "home_turnovers",
+      "coefficient": 0.47587891290190165
     }
   ],
   "feature_descriptions": {
@@ -62,17 +62,17 @@
       "away_team": "BUF",
       "home_team": "DEN",
       "vegas_total": 45.5,
-      "model_total": 45.5,
-      "edge": 0.0,
-      "recommendation": "hold"
+      "model_total": 54.100000000000016,
+      "edge": 8.600000000000016,
+      "recommendation": "over"
     },
     {
       "game": "49ers @ Seahawks",
       "away_team": "SF",
       "home_team": "SEA",
       "vegas_total": 45.5,
-      "model_total": 45.5,
-      "edge": 0.0,
+      "model_total": 45.30000000000001,
+      "edge": -0.19999999999998863,
       "recommendation": "hold"
     },
     {
@@ -80,18 +80,18 @@
       "away_team": "HOU",
       "home_team": "NE",
       "vegas_total": 40.5,
-      "model_total": 40.5,
-      "edge": 0.0,
-      "recommendation": "hold"
+      "model_total": 38.70000000000001,
+      "edge": -1.79999999999999,
+      "recommendation": "under"
     },
     {
       "game": "LA @ Bears",
       "away_team": "LAR",
       "home_team": "CHI",
       "vegas_total": 48.5,
-      "model_total": 48.5,
-      "edge": 0.0,
-      "recommendation": "hold"
+      "model_total": 39.8,
+      "edge": -8.700000000000003,
+      "recommendation": "under"
     }
   ]
 }
