@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-15T16:53:22.631642",
+  "generated_at": "2026-01-15T16:59:33.327618",
   "model_type": "Team-Specific EPA Predictions",
   "training_source": "2024 NFL Season (team-specific EPA and yards)",
   "predictions": [
@@ -8,17 +8,21 @@
       "away_team": "BUF",
       "home_team": "DEN",
       "vegas_total": 45.5,
-      "model_total": 46.19513004552573,
-      "edge": 0.6951300455257297,
-      "recommendation": "hold"
+      "model_total": 50.75948577513918,
+      "home_score": 22.740619519725442,
+      "away_score": 28.01886625541374,
+      "edge": 5.259485775139183,
+      "recommendation": "over"
     },
     {
       "game": "49ers @ Seahawks",
       "away_team": "SF",
       "home_team": "SEA",
       "vegas_total": 45.5,
-      "model_total": 45.10371512034908,
-      "edge": -0.39628487965092063,
+      "model_total": 47.42842062516138,
+      "home_score": 22.48737315600738,
+      "away_score": 24.941047469154,
+      "edge": 1.9284206251613796,
       "recommendation": "hold"
     },
     {
@@ -26,8 +30,10 @@
       "away_team": "HOU",
       "home_team": "NE",
       "vegas_total": 40.5,
-      "model_total": 44.38608380500227,
-      "edge": 3.886083805002272,
+      "model_total": 43.49995236285031,
+      "home_score": 21.641407880932093,
+      "away_score": 21.858544481918216,
+      "edge": 2.9999523628503084,
       "recommendation": "over"
     },
     {
@@ -35,8 +41,10 @@
       "away_team": "LAR",
       "home_team": "CHI",
       "vegas_total": 48.5,
-      "model_total": 44.619054263457656,
-      "edge": -3.880945736542344,
+      "model_total": 44.41627394314855,
+      "home_score": 21.416273943148553,
+      "away_score": 23.0,
+      "edge": -4.083726056851447,
       "recommendation": "under"
     }
   ]

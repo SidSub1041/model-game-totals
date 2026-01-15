@@ -30,45 +30,34 @@ print("-" * 80)
 
 def calculate_prediction(home_stats, away_stats, vegas_total):
     """
-    Calculate predicted total using team-specific stats
+    Calculate predicted total and score distribution using team-specific stats
+    Returns: (total, home_score, away_score)
     """
     # Extract EPA metrics (these are per-play, scale up)
-    home_off_epa = home_stats.get('off_epa_per_play', 0) * 50
-    away_off_epa = away_stats.get('off_epa_per_play', 0) * 50
-    home_def_epa = home_stats.get('def_epa_per_play', 0) * 50
-    away_def_epa = away_stats.get('def_epa_per_play', 0) * 50
+    home_off_epa = home_stats.get('off_epa_per_play', 0)
+    away_off_epa = away_stats.get('off_epa_per_play', 0)
+    home_def_epa = home_stats.get('def_epa_per_play', 0)
+    away_def_epa = away_stats.get('def_epa_per_play', 0)
     
-    # Extract yards (full-game scale)
-    home_pass_yards = home_stats.get('pass_yards', 0)
-    away_pass_yards = away_stats.get('pass_yards', 0)
-    home_rush_yards = home_stats.get('rush_yards', 0)
-    away_rush_yards = away_stats.get('rush_yards', 0)
+    # Simple scoring formula based on EPA:
+    # League average is ~23 points per team
+    base_team_score = 23.0
     
-    # Extract turnovers
-    home_turnovers = home_stats.get('turnovers', 0)
-    away_turnovers = away_stats.get('turnovers', 0)
+    # Each 0.1 EPA per play ≈ 3-4 additional points
+    # Each -0.1 DEF EPA per play ≈ 3-4 additional points (better defense = allow fewer points)
+    epa_points_per_unit = 35.0
     
-    # Simple scoring formula:
-    # Base average = 45 points league-wide
-    # EPA impact: Good offense + good defense = more points
-    # Yards impact: More yards = more points
-    # Turnovers: Cost ~3 points per turnover
+    # Calculate team-specific scoring
+    home_score = base_team_score + (home_off_epa * epa_points_per_unit) - (home_def_epa * epa_points_per_unit * 0.5)
+    away_score = base_team_score + (away_off_epa * epa_points_per_unit) - (away_def_epa * epa_points_per_unit * 0.5)
     
-    league_avg = 45.0
+    # Clip to reasonable range
+    home_score = np.clip(home_score, 10, 40)
+    away_score = np.clip(away_score, 10, 40)
     
-    # EPA contributes to scoring (high EPA = more points expected)
-    epa_factor = (home_off_epa + away_off_epa) * 0.15  # Scaled impact
+    pred_total = home_score + away_score
     
-    # Yards contributes (high yards = more scoring)
-    yards_factor = (home_pass_yards + away_pass_yards + home_rush_yards + away_rush_yards) * 0.01  # Per yard
-    
-    # Turnovers reduce points
-    turnover_factor = (home_turnovers + away_turnovers) * -3.0
-    
-    # Combined prediction
-    pred_total = league_avg + epa_factor + yards_factor + turnover_factor
-    
-    return np.clip(pred_total, 30, 80)
+    return pred_total, home_score, away_score
 
 predictions = []
 
@@ -83,8 +72,10 @@ for game in games_data['games']:
     if not home_stats or not away_stats:
         print(f"  ⚠ Missing stats for {away_abbr} @ {home_abbr}")
         pred_total = vegas_total
+        home_score = vegas_total / 2
+        away_score = vegas_total / 2
     else:
-        pred_total = calculate_prediction(home_stats, away_stats, vegas_total)
+        pred_total, home_score, away_score = calculate_prediction(home_stats, away_stats, vegas_total)
     
     prediction = {
         'game': f"{game['awayTeam']} @ {game['homeTeam']}",
@@ -92,14 +83,17 @@ for game in games_data['games']:
         'home_team': home_abbr,
         'vegas_total': vegas_total,
         'model_total': float(pred_total),
+        'home_score': float(home_score),
+        'away_score': float(away_score),
         'edge': float(pred_total - vegas_total),
         'recommendation': 'over' if pred_total > vegas_total + 2 else 'under' if pred_total < vegas_total - 2 else 'hold'
     }
     predictions.append(prediction)
     
     print(f"  {prediction['game']:<30} Model: {pred_total:>6.1f}  Vegas: {vegas_total:>6.1f}  Edge: {prediction['edge']:>+6.1f}")
-    print(f"    Home ({home_abbr}): OFF_EPA={home_stats.get('off_epa_per_play', 0):+.4f}, Pass={home_stats.get('pass_yards', 0):.0f}yd")
-    print(f"    Away ({away_abbr}): OFF_EPA={away_stats.get('off_epa_per_play', 0):+.4f}, Pass={away_stats.get('pass_yards', 0):.0f}yd")
+    print(f"    Projected: {away_abbr} {away_score:.1f} @ {home_abbr} {home_score:.1f}")
+    print(f"    Home ({home_abbr}): OFF_EPA={home_stats.get('off_epa_per_play', 0):+.4f}, Def EPA={home_stats.get('def_epa_per_play', 0):+.4f}")
+    print(f"    Away ({away_abbr}): OFF_EPA={away_stats.get('off_epa_per_play', 0):+.4f}, Def EPA={away_stats.get('def_epa_per_play', 0):+.4f}")
 
 # Step 3: Export to both files
 print("\nEXPORTING RESULTS")
@@ -127,6 +121,8 @@ try:
     for i, pred in enumerate(predictions):
         if i < len(nfl_data['games']):
             nfl_data['games'][i]['modelTotal'] = pred['model_total']
+            nfl_data['games'][i]['homeScore'] = pred['home_score']
+            nfl_data['games'][i]['awayScore'] = pred['away_score']
             nfl_data['games'][i]['edge'] = pred['edge']
             nfl_data['games'][i]['recommendation'] = pred['recommendation']
     
