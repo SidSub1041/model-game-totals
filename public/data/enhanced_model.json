@@ -1,78 +1,77 @@
 {
-  "generated_at": "2026-01-15T16:23:32.127237",
-  "model_type": "Enhanced Linear Regression",
-  "features": 16,
-  "training_samples": 4,
+  "generated_at": "2026-01-15T16:37:13.548475",
+  "model_type": "Historical Linear Regression",
+  "training_source": "2022-2024 NFL Regular Season",
+  "features": 14,
+  "training_samples": 683,
+  "test_samples": 171,
   "metrics": {
-    "r2_score": 1.0,
-    "mae": 8.881784197001252e-15,
-    "rmse": 1.0658141036401503e-14
+    "train_r2_score": 0.5998384516963136,
+    "test_r2_score": 0.5476853960292662,
+    "train_mae": 6.88707665003542,
+    "test_mae": 6.7043086314763425,
+    "train_rmse": 8.712523219906931,
+    "test_rmse": 8.607784929829112
   },
-  "top_features": [
+  "feature_importance": [
     {
-      "feature": "away_off_epa",
-      "coefficient": 0.8463307569501333
-    },
-    {
-      "feature": "home_rush_yards",
-      "coefficient": 0.8202357387025256
-    },
-    {
-      "feature": "away_pass_epa",
-      "coefficient": 0.8099535190877027
+      "feature": "home_pass_yards",
+      "coefficient": 4.3036370907347585
     },
     {
       "feature": "home_off_epa",
-      "coefficient": 0.6898828130530574
+      "coefficient": 3.305224461714328
     },
     {
-      "feature": "home_def_epa",
-      "coefficient": 0.6765069911493453
+      "feature": "away_def_epa",
+      "coefficient": 3.3052244617143254
     },
     {
-      "feature": "home_pass_epa",
-      "coefficient": 0.6218390592603658
-    },
-    {
-      "feature": "away_rush_epa",
-      "coefficient": 0.592455289074584
-    },
-    {
-      "feature": "away_rush_yards",
-      "coefficient": 0.5681794279005113
-    },
-    {
-      "feature": "home_rush_epa",
-      "coefficient": 0.5640642036003921
+      "feature": "away_pass_yards",
+      "coefficient": 3.3048022579404797
     },
     {
       "feature": "home_turnovers",
-      "coefficient": 0.47587891290190165
+      "coefficient": 2.9761089535671554
+    },
+    {
+      "feature": "away_turnovers",
+      "coefficient": 2.575866349862819
+    },
+    {
+      "feature": "home_rush_yards",
+      "coefficient": 2.385725003546945
+    },
+    {
+      "feature": "away_rush_yards",
+      "coefficient": 2.2117760132819484
+    },
+    {
+      "feature": "home_pass_epa",
+      "coefficient": 1.9830240994361936
+    },
+    {
+      "feature": "home_def_epa",
+      "coefficient": 1.291238092107113
     }
   ],
-  "feature_descriptions": {
-    "epa": "Expected Points Added (offensive/defensive efficiency)",
-    "yards": "Total offensive yards (passing + rushing)",
-    "turnovers": "Interceptions + Fumbles lost",
-    "injury_factor": "Adjustment for high-impact injuries (0.85 = 15% reduction)"
-  },
   "predictions": [
     {
       "game": "Bills @ Broncos",
       "away_team": "BUF",
       "home_team": "DEN",
       "vegas_total": 45.5,
-      "model_total": 54.100000000000016,
-      "edge": 8.600000000000016,
-      "recommendation": "over"
+      "model_total": 45.710764794722124,
+      "edge": 0.21076479472212384,
+      "recommendation": "hold"
     },
     {
       "game": "49ers @ Seahawks",
       "away_team": "SF",
       "home_team": "SEA",
       "vegas_total": 45.5,
-      "model_total": 45.30000000000001,
-      "edge": -0.19999999999998863,
+      "model_total": 45.710764794722124,
+      "edge": 0.21076479472212384,
       "recommendation": "hold"
     },
     {
@@ -80,17 +79,17 @@
       "away_team": "HOU",
       "home_team": "NE",
       "vegas_total": 40.5,
-      "model_total": 38.70000000000001,
-      "edge": -1.79999999999999,
-      "recommendation": "under"
+      "model_total": 45.710764794722124,
+      "edge": 5.210764794722124,
+      "recommendation": "over"
     },
     {
       "game": "LA @ Bears",
       "away_team": "LAR",
       "home_team": "CHI",
       "vegas_total": 48.5,
-      "model_total": 39.8,
-      "edge": -8.700000000000003,
+      "model_total": 45.710764794722124,
+      "edge": -2.789235205277876,
       "recommendation": "under"
     }
   ]
