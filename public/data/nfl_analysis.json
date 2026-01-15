@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-01-15T13:30:07.582005",
+  "trainingSeasons": [
+    2024
+  ],
+  "playoffWeekend": "Divisional Round - January 18-19, 2026",
+  "modelMetrics": {
+    "r2_score": 0.2347,
+    "mae": 8.84,
+    "rmse": 11.45,
+    "training_samples": 272
+  },
+  "summaryStats": {
+    "gamesAnalyzed": 4,
+    "avgEdge": 4.8,
+    "overPicks": 1,
+    "underPicks": 1,
+    "holdPicks": 2,
+    "avgModelTotal": 44.4,
+    "avgVegasTotal": 45.0
+  },
+  "games": [
+    {
+      "homeTeam": "Broncos",
+      "awayTeam": "Bills",
+      "homeAbbr": "DEN",
+      "awayAbbr": "BUF",
+      "gameDate": "Sat, Jan 17",
+      "gameTime": "TBD",
+      "vegasTotal": 45.5,
+      "modelTotal": 54.1,
+      "homeScore": 23.8,
+      "awayScore": 30.3,
+      "edge": 8.6,
+      "recommendation": "over",
+      "homeOffEpa": 0.014999999664723873,
+      "homeDefEpa": -0.09099999815225601,
+      "awayOffEpa": 0.1899999976158142,
+      "awayDefEpa": 0.008999999612569809
+    },
+    {
+      "homeTeam": "Seahawks",
+      "awayTeam": "49ers",
+      "homeAbbr": "SEA",
+      "awayAbbr": "SF",
+      "gameDate": "Sun, Jan 18",
+      "gameTime": "TBD",
+      "vegasTotal": 45.5,
+      "modelTotal": 45.3,
+      "homeScore": 22.2,
+      "awayScore": 23.1,
+      "edge": -0.2,
+      "recommendation": "hold",
+      "homeOffEpa": -0.029999999329447746,
+      "homeDefEpa": -0.012000000104308128,
+      "awayOffEpa": 0.0689999982714653,
+      "awayDefEpa": 0.04100000113248825
+    },
+    {
+      "homeTeam": "Patriots",
+      "awayTeam": "Texans",
+      "homeAbbr": "NE",
+      "awayAbbr": "HOU",
+      "gameDate": "Sun, Jan 18",
+      "gameTime": "TBD",
+      "vegasTotal": 40.5,
+      "modelTotal": 38.7,
+      "homeScore": 16.9,
+      "awayScore": 21.8,
+      "edge": -1.8,
+      "recommendation": "hold",
+      "homeOffEpa": -0.08299999684095383,
+      "homeDefEpa": 0.07000000029802322,
+      "awayOffEpa": -0.04500000178813934,
+      "awayDefEpa": -0.0820000022649765
+    },
+    {
+      "homeTeam": "Bears",
+      "awayTeam": "LA",
+      "homeAbbr": "CHI",
+      "awayAbbr": "LAR",
+      "gameDate": "Sun, Jan 18",
+      "gameTime": "TBD",
+      "vegasTotal": 48.5,
+      "modelTotal": 39.7,
+      "homeScore": 18.1,
+      "awayScore": 21.7,
+      "edge": -8.8,
+      "recommendation": "under",
+      "homeOffEpa": -0.0820000022649765,
+      "homeDefEpa": 0.006000000052154064,
+      "awayOffEpa": 0.009999999776482582,
+      "awayDefEpa": 0.019999999552965164
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-01-15T13:45:09.283185",
+  "source": "The-Odds-API",
+  "gamesCount": 4,
+  "games": [
+    {
+      "id": "ea794ebbcb7cbcaf7753c65d0f1a15c8",
+      "date": "2026-01-17T21:30:00+00:00",
+      "home_team": "DEN",
+      "home_team_name": "Broncos",
+      "away_team": "BUF",
+      "away_team_name": "Bills",
+      "over_under": 45.5,
+      "spread": null,
+      "home_moneyline": null,
+      "away_moneyline": null,
+      "status": "Scheduled"
+    },
+    {
+      "id": "9161553abe07f4eadf12b071f4f6e3ac",
+      "date": "2026-01-18T01:00:00+00:00",
+      "home_team": "SEA",
+      "home_team_name": "Seahawks",
+      "away_team": "SF",
+      "away_team_name": "49ers",
+      "over_under": 45.5,
+      "spread": null,
+      "home_moneyline": null,
+      "away_moneyline": null,
+      "status": "Scheduled"
+    },
+    {
+      "id": "1e7cc7c3ef7d9f4e473cb43f39652897",
+      "date": "2026-01-18T20:00:00+00:00",
+      "home_team": "NE",
+      "home_team_name": "Patriots",
+      "away_team": "HOU",
+      "away_team_name": "Texans",
+      "over_under": 40.5,
+      "spread": null,
+      "home_moneyline": null,
+      "away_moneyline": null,
+      "status": "Scheduled"
+    },
+    {
+      "id": "3cb03f5ff8d371b94e8b55c7e58b7a34",
+      "date": "2026-01-18T23:30:00+00:00",
+      "home_team": "CHI",
+      "home_team_name": "Bears",
+      "away_team": "LAR",
+      "away_team_name": "Rams",
+      "over_under": 48.5,
+      "spread": null,
+      "home_moneyline": null,
+      "away_moneyline": null,
+      "status": "Scheduled"
+    }
+  ]
+}
