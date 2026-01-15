@@ -101,7 +101,7 @@ for game in games_data['games']:
     print(f"    Home ({home_abbr}): OFF_EPA={home_stats.get('off_epa_per_play', 0):+.4f}, Pass={home_stats.get('pass_yards', 0):.0f}yd")
     print(f"    Away ({away_abbr}): OFF_EPA={away_stats.get('off_epa_per_play', 0):+.4f}, Pass={away_stats.get('pass_yards', 0):.0f}yd")
 
-# Step 3: Export
+# Step 3: Export to both files
 print("\nEXPORTING RESULTS")
 print("-" * 80)
 
@@ -112,10 +112,30 @@ output = {
     'predictions': predictions,
 }
 
+# Write to enhanced_model.json for reference
 with open('public/data/enhanced_model.json', 'w') as f:
     json.dump(output, f, indent=2)
 
 print(f"  ✓ Exported to public/data/enhanced_model.json")
+
+# Also update nfl_analysis.json with new predictions
+try:
+    with open('public/data/nfl_analysis.json', 'r') as f:
+        nfl_data = json.load(f)
+    
+    # Update each game with new model_total and edge
+    for i, pred in enumerate(predictions):
+        if i < len(nfl_data['games']):
+            nfl_data['games'][i]['modelTotal'] = pred['model_total']
+            nfl_data['games'][i]['edge'] = pred['edge']
+            nfl_data['games'][i]['recommendation'] = pred['recommendation']
+    
+    with open('public/data/nfl_analysis.json', 'w') as f:
+        json.dump(nfl_data, f, indent=2)
+    
+    print(f"  ✓ Updated public/data/nfl_analysis.json with new predictions")
+except Exception as e:
+    print(f"  ⚠ Failed to update nfl_analysis.json: {e}")
 
 print("\n" + "=" * 80)
 print("✓ TEAM-SPECIFIC PREDICTIONS COMPLETE")
