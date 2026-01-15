@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-01-15T16:13:26.948309",
+  "source": "Manual curation (ESPN/NFL.com recommended for real-time)",
+  "playoff_teams": {
+    "HOU": {
+      "team_name": "Houston Texans",
+      "key_injuries": [
+        {
+          "player": "Nico Collins",
+          "position": "WR",
+          "status": "Out",
+          "impact": "High",
+          "reason": "Hamstring"
+        },
+        {
+          "player": "Stefon Diggs",
+          "position": "WR",
+          "status": "Questionable",
+          "impact": "Medium",
+          "reason": "Ankle"
+        }
+      ]
+    },
+    "NE": {
+      "team_name": "New England Patriots",
+      "key_injuries": [
+        {
+          "player": "Rob Gronkowski",
+          "position": "TE",
+          "status": "Out",
+          "impact": "High",
+          "reason": "Back injury"
+        }
+      ]
+    },
+    "BUF": {
+      "team_name": "Buffalo Bills",
+      "key_injuries": [
+        {
+          "player": "Damar Hamlin",
+          "position": "S",
+          "status": "Probable",
+          "impact": "Low",
+          "reason": "Wrist"
+        }
+      ]
+    },
+    "DEN": {
+      "team_name": "Denver Broncos",
+      "key_injuries": []
+    },
+    "SF": {
+      "team_name": "San Francisco 49ers",
+      "key_injuries": [
+        {
+          "player": "Elijah Mitchell",
+          "position": "RB",
+          "status": "Doubtful",
+          "impact": "Medium",
+          "reason": "Knee"
+        }
+      ]
+    },
+    "SEA": {
+      "team_name": "Seattle Seahawks",
+      "key_injuries": []
+    },
+    "LAR": {
+      "team_name": "Los Angeles Rams",
+      "key_injuries": [
+        {
+          "player": "Aaron Donald",
+          "position": "DE",
+          "status": "Probable",
+          "impact": "Medium",
+          "reason": "Back"
+        }
+      ]
+    },
+    "CHI": {
+      "team_name": "Chicago Bears",
+      "key_injuries": [
+        {
+          "player": "Jaylon Johnson",
+          "position": "CB",
+          "status": "Out",
+          "impact": "High",
+          "reason": "Hamstring"
+        }
+      ]
+    }
+  },
+  "advisory": {
+    "high_impact": [
+      {
+        "team": "HOU",
+        "player": "Nico Collins",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "team": "NE",
+        "player": "Rob Gronkowski",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "team": "CHI",
+        "player": "Jaylon Johnson",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "medium_impact": [
+      {
+        "team": "HOU",
+        "player": "Stefon Diggs",
+        "position": "WR",
+        "status": "Questionable"
+      },
+      {
+        "team": "SF",
+        "player": "Elijah Mitchell",
+        "position": "RB",
+        "status": "Doubtful"
+      },
+      {
+        "team": "LAR",
+        "player": "Aaron Donald",
+        "position": "DE",
+        "status": "Probable"
+      }
+    ],
+    "low_impact": [
+      {
+        "team": "BUF",
+        "player": "Damar Hamlin",
+        "position": "S",
+        "status": "Probable"
+      }
+    ]
+  }
+}

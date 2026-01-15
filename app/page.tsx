@@ -2,9 +2,22 @@ import { GameCard } from "@/components/game-card"
 import { StatsCard } from "@/components/stats-card"
 import { ModelMetrics } from "@/components/model-metrics"
 import { PlayoffBranding } from "@/components/playoff-branding"
+import { InjuryAlert } from "@/components/injury-alert"
 import { TrendingUpIcon, TargetIcon, CalendarIcon, ActivityIcon } from "lucide-react"
 import { analysisData } from "@/lib/sample-data"
 import { loadAnalysisData } from "@/lib/data-loader"
+
+async function loadInjuryData() {
+  try {
+    const response = await fetch(new URL('public/data/injury_report.json', process.env.VERCEL_URL || 'http://localhost:3000').toString())
+    if (response.ok) {
+      return await response.json()
+    }
+  } catch (e) {
+    console.warn("Could not load injury data:", e)
+  }
+  return { advisory: { high_impact: [] } }
+}
 
 export default async function Home() {
   // Load actual data from generated JSON files, fallback to sample data
@@ -18,6 +31,9 @@ export default async function Home() {
   } catch (error) {
     console.warn("Could not load actual analysis data, using sample data:", error)
   }
+
+  const injuryData = await loadInjuryData()
+  const highImpactInjuries = injuryData.advisory?.high_impact || []
 
   const { games, modelMetrics, summaryStats, season, generatedAt, playoffWeekend } = displayData
   
@@ -74,6 +90,11 @@ export default async function Home() {
           <p className="text-sm text-white drop-shadow-md mt-1">Model vs Vegas Projections • Data from nflfastR • Updated {formattedDate}</p>
           <p className="text-xs text-white/70 drop-shadow-md mt-3 italic">Designed by Sid Subramanian</p>
         </div>
+
+        {/* Injury Alert */}
+        {highImpactInjuries.length > 0 && (
+          <InjuryAlert highImpactInjuries={highImpactInjuries} />
+        )}
 
         {/* Summary Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">

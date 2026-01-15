@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-01-15T16:15:02.745014",
+  "model_type": "Enhanced Linear Regression",
+  "features": 16,
+  "training_samples": 4,
+  "metrics": {
+    "r2_score": 1.0,
+    "mae": 0.0,
+    "rmse": 0.0
+  },
+  "top_features": [
+    {
+      "feature": "away_injury_factor",
+      "coefficient": 0.500398577231962
+    },
+    {
+      "feature": "home_injury_factor",
+      "coefficient": 0.500398577231962
+    },
+    {
+      "feature": "away_pass_yards",
+      "coefficient": 0.4791882008919874
+    },
+    {
+      "feature": "away_rush_yards",
+      "coefficient": 0.46199154700500333
+    },
+    {
+      "feature": "home_rush_yards",
+      "coefficient": 0.41239440791831355
+    },
+    {
+      "feature": "away_turnovers",
+      "coefficient": 0.3615332990699173
+    },
+    {
+      "feature": "home_turnovers",
+      "coefficient": 0.354398533189813
+    },
+    {
+      "feature": "away_rush_epa",
+      "coefficient": 0.2959026261870662
+    },
+    {
+      "feature": "away_def_epa",
+      "coefficient": 0.2888801772298869
+    },
+    {
+      "feature": "home_rush_epa",
+      "coefficient": 0.26466623091449826
+    }
+  ],
+  "feature_descriptions": {
+    "epa": "Expected Points Added (offensive/defensive efficiency)",
+    "yards": "Total offensive yards (passing + rushing)",
+    "turnovers": "Interceptions + Fumbles lost",
+    "injury_factor": "Adjustment for high-impact injuries (0.85 = 15% reduction)"
+  },
+  "predictions": [
+    {
+      "game": "Bills @ Broncos",
+      "away_team": "BUF",
+      "home_team": "DEN",
+      "vegas_total": 45.5,
+      "model_total": 45.5,
+      "edge": 0.0,
+      "recommendation": "hold"
+    },
+    {
+      "game": "49ers @ Seahawks",
+      "away_team": "SF",
+      "home_team": "SEA",
+      "vegas_total": 45.5,
+      "model_total": 45.5,
+      "edge": 0.0,
+      "recommendation": "hold"
+    },
+    {
+      "game": "Texans @ Patriots",
+      "away_team": "HOU",
+      "home_team": "NE",
+      "vegas_total": 40.5,
+      "model_total": 40.5,
+      "edge": 0.0,
+      "recommendation": "hold"
+    },
+    {
+      "game": "LA @ Bears",
+      "away_team": "LAR",
+      "home_team": "CHI",
+      "vegas_total": 48.5,
+      "model_total": 48.5,
+      "edge": 0.0,
+      "recommendation": "hold"
+    }
+  ]
+}

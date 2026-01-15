@@ -1,0 +1,1933 @@
+{
+  "generated_at": "2026-01-15T16:13:13.625744",
+  "data_source": "nflfastR (2024-2025 seasons)",
+  "season_weights": {
+    "2024": 0.3,
+    "2025": 0.7
+  },
+  "team_stats": {
+    "ARI": {
+      "off_epa": 85.55537414550781,
+      "off_epa_per_play": 0.06249479576945305,
+      "off_pass_epa": 82.28096008300781,
+      "off_rush_epa": -8.471782684326172,
+      "def_epa": -66.78884887695312,
+      "def_epa_per_play": -0.0493270680308342,
+      "def_pass_epa": -67.64057159423828,
+      "def_rush_epa": 13.463191032409668,
+      "plays_off": 1369,
+      "plays_def": 1354
+    },
+    "ATL": {
+      "off_epa": 16.09703826904297,
+      "off_epa_per_play": 0.011327965185046196,
+      "off_pass_epa": 51.115966796875,
+      "off_rush_epa": -4.970704078674316,
+      "def_epa": -61.29073715209961,
+      "def_epa_per_play": -0.04365437105298042,
+      "def_pass_epa": -76.2326431274414,
+      "def_rush_epa": 27.586069107055664,
+      "plays_off": 1421,
+      "plays_def": 1404
+    },
+    "BAL": {
+      "off_epa": 221.52542114257812,
+      "off_epa_per_play": 0.1421857625246048,
+      "off_pass_epa": 201.94879150390625,
+      "off_rush_epa": 45.517879486083984,
+      "def_epa": -25.2659854888916,
+      "def_epa_per_play": -0.01608274132013321,
+      "def_pass_epa": -47.37421417236328,
+      "def_rush_epa": 57.070106506347656,
+      "plays_off": 1558,
+      "plays_def": 1571
+    },
+    "BUF": {
+      "off_epa": 227.99644470214844,
+      "off_epa_per_play": 0.1396181583404541,
+      "off_pass_epa": 213.87742614746094,
+      "off_rush_epa": 25.533958435058594,
+      "def_epa": -12.029216766357422,
+      "def_epa_per_play": -0.007556040771305561,
+      "def_pass_epa": -89.44480895996094,
+      "def_rush_epa": 72.6387939453125,
+      "plays_off": 1633,
+      "plays_def": 1592
+    },
+    "CAR": {
+      "off_epa": -52.765140533447266,
+      "off_epa_per_play": -0.03899862617254257,
+      "off_pass_epa": -28.672653198242188,
+      "off_rush_epa": -13.264861106872559,
+      "def_epa": -180.25759887695312,
+      "def_epa_per_play": -0.12065435200929642,
+      "def_pass_epa": -128.3103485107422,
+      "def_rush_epa": -56.25178527832031,
+      "plays_off": 1353,
+      "plays_def": 1494
+    },
+    "CHI": {
+      "off_epa": -72.48127746582031,
+      "off_epa_per_play": -0.050792764872312546,
+      "off_pass_epa": -29.766210556030273,
+      "off_rush_epa": -53.715553283691406,
+      "def_epa": -14.845355987548828,
+      "def_epa_per_play": -0.011086897924542427,
+      "def_pass_epa": -11.111366271972656,
+      "def_rush_epa": 12.355958938598633,
+      "plays_off": 1427,
+      "plays_def": 1339
+    },
+    "CIN": {
+      "off_epa": 127.03822326660156,
+      "off_epa_per_play": 0.08908711373806,
+      "off_pass_epa": 146.49359130859375,
+      "off_rush_epa": -27.20140838623047,
+      "def_epa": -79.063720703125,
+      "def_epa_per_play": -0.05575720965862274,
+      "def_pass_epa": -60.01719284057617,
+      "def_rush_epa": -1.2420425415039062,
+      "plays_off": 1426,
+      "plays_def": 1418
+    },
+    "CLE": {
+      "off_epa": -221.1063995361328,
+      "off_epa_per_play": -0.15031026303768158,
+      "off_pass_epa": -155.45346069335938,
+      "off_rush_epa": -50.93448257446289,
+      "def_epa": 15.283987045288086,
+      "def_epa_per_play": 0.011083384044468403,
+      "def_pass_epa": -58.33234405517578,
+      "def_rush_epa": 40.1895751953125,
+      "plays_off": 1471,
+      "plays_def": 1379
+    },
+    "DAL": {
+      "off_epa": -66.2528076171875,
+      "off_epa_per_play": -0.04482598602771759,
+      "off_pass_epa": -50.498565673828125,
+      "off_rush_epa": -53.46571350097656,
+      "def_epa": -71.33795928955078,
+      "def_epa_per_play": -0.05070217326283455,
+      "def_pass_epa": -35.207916259765625,
+      "def_rush_epa": -38.120521545410156,
+      "plays_off": 1478,
+      "plays_def": 1407
+    },
+    "DEN": {
+      "off_epa": 28.533214569091797,
+      "off_epa_per_play": 0.019732514396309853,
+      "off_pass_epa": 39.029319763183594,
+      "off_rush_epa": -33.789398193359375,
+      "def_epa": 83.5473403930664,
+      "def_epa_per_play": 0.05428677052259445,
+      "def_pass_epa": 26.307418823242188,
+      "def_rush_epa": 62.70399475097656,
+      "plays_off": 1446,
+      "plays_def": 1539
+    },
+    "DET": {
+      "off_epa": 202.62606811523438,
+      "off_epa_per_play": 0.1341894418001175,
+      "off_pass_epa": 159.67910766601562,
+      "off_rush_epa": 21.4903507232666,
+      "def_epa": 28.98314666748047,
+      "def_epa_per_play": 0.019569983705878258,
+      "def_pass_epa": -10.51346206665039,
+      "def_rush_epa": 37.46268844604492,
+      "plays_off": 1510,
+      "plays_def": 1481
+    },
+    "GB": {
+      "off_epa": 83.07125854492188,
+      "off_epa_per_play": 0.05756843835115433,
+      "off_pass_epa": 97.87727355957031,
+      "off_rush_epa": -17.404226303100586,
+      "def_epa": 55.29539489746094,
+      "def_epa_per_play": 0.03805601969361305,
+      "def_pass_epa": 17.879709243774414,
+      "def_rush_epa": 55.02012252807617,
+      "plays_off": 1443,
+      "plays_def": 1453
+    },
+    "HOU": {
+      "off_epa": -28.414018630981445,
+      "off_epa_per_play": -0.017972180619835854,
+      "off_pass_epa": 3.981830596923828,
+      "off_rush_epa": -51.962005615234375,
+      "def_epa": 44.74238967895508,
+      "def_epa_per_play": 0.02928166836500168,
+      "def_pass_epa": 17.053508758544922,
+      "def_rush_epa": 65.59351348876953,
+      "plays_off": 1581,
+      "plays_def": 1528
+    },
+    "IND": {
+      "off_epa": -49.234745025634766,
+      "off_epa_per_play": -0.03578106313943863,
+      "off_pass_epa": -16.996212005615234,
+      "off_rush_epa": -33.81134796142578,
+      "def_epa": -12.404232025146484,
+      "def_epa_per_play": -0.008554643020033836,
+      "def_pass_epa": -66.05612182617188,
+      "def_rush_epa": 59.07548141479492,
+      "plays_off": 1376,
+      "plays_def": 1450
+    },
+    "JAX": {
+      "off_epa": 8.746950149536133,
+      "off_epa_per_play": 0.006702643819153309,
+      "off_pass_epa": 3.7108726501464844,
+      "off_rush_epa": -25.775100708007812,
+      "def_epa": -143.69190979003906,
+      "def_epa_per_play": -0.09735224395990372,
+      "def_pass_epa": -168.49761962890625,
+      "def_rush_epa": 19.15584373474121,
+      "plays_off": 1305,
+      "plays_def": 1476
+    },
+    "KC": {
+      "off_epa": 76.79270935058594,
+      "off_epa_per_play": 0.04734445735812187,
+      "off_pass_epa": 108.43925476074219,
+      "off_rush_epa": -30.0540771484375,
+      "def_epa": -17.150253295898438,
+      "def_epa_per_play": -0.010573522187769413,
+      "def_pass_epa": -79.4792709350586,
+      "def_rush_epa": 55.11261749267578,
+      "plays_off": 1622,
+      "plays_def": 1622
+    },
+    "LAC": {
+      "off_epa": 24.91829490661621,
+      "off_epa_per_play": 0.01749880239367485,
+      "off_pass_epa": 59.497894287109375,
+      "off_rush_epa": -39.73278045654297,
+      "def_epa": 77.48853302001953,
+      "def_epa_per_play": 0.053001731634140015,
+      "def_pass_epa": 16.47269058227539,
+      "def_rush_epa": 51.95942306518555,
+      "plays_off": 1424,
+      "plays_def": 1462
+    },
+    "LAR": {
+      "off_epa": 0.0,
+      "off_epa_per_play": 0.0,
+      "off_pass_epa": 0.0,
+      "off_rush_epa": 0.0,
+      "def_epa": 0.0,
+      "def_epa_per_play": 0.0,
+      "def_pass_epa": 0.0,
+      "def_rush_epa": 0.0,
+      "plays_off": 0,
+      "plays_def": 0
+    },
+    "LV": {
+      "off_epa": -148.82733154296875,
+      "off_epa_per_play": -0.10607792437076569,
+      "off_pass_epa": -44.14207458496094,
+      "off_rush_epa": -101.55197143554688,
+      "def_epa": 1.368229866027832,
+      "def_epa_per_play": 0.000962186953984201,
+      "def_pass_epa": -57.47273254394531,
+      "def_rush_epa": 42.03166580200195,
+      "plays_off": 1403,
+      "plays_def": 1422
+    },
+    "MIA": {
+      "off_epa": -20.58367919921875,
+      "off_epa_per_play": -0.014619090594351292,
+      "off_pass_epa": 60.74445343017578,
+      "off_rush_epa": -106.07882690429688,
+      "def_epa": 3.3957290649414062,
+      "def_epa_per_play": 0.002496859524399042,
+      "def_pass_epa": -17.125024795532227,
+      "def_rush_epa": 39.40644836425781,
+      "plays_off": 1408,
+      "plays_def": 1360
+    },
+    "MIN": {
+      "off_epa": 11.633697509765625,
+      "off_epa_per_play": 0.007813094183802605,
+      "off_pass_epa": 63.896934509277344,
+      "off_rush_epa": -49.96201705932617,
+      "def_epa": 103.21094512939453,
+      "def_epa_per_play": 0.06862429529428482,
+      "def_pass_epa": 20.619548797607422,
+      "def_rush_epa": 79.04132843017578,
+      "plays_off": 1489,
+      "plays_def": 1504
+    },
+    "NE": {
+      "off_epa": -88.15896606445312,
+      "off_epa_per_play": -0.06388331204652786,
+      "off_pass_epa": -11.547822952270508,
+      "off_rush_epa": -73.83412170410156,
+      "def_epa": -68.93258666992188,
+      "def_epa_per_play": -0.050132788717746735,
+      "def_pass_epa": -113.67333984375,
+      "def_rush_epa": 21.169198989868164,
+      "plays_off": 1380,
+      "plays_def": 1375
+    },
+    "NO": {
+      "off_epa": -68.75178527832031,
+      "off_epa_per_play": -0.050220441073179245,
+      "off_pass_epa": -48.41046142578125,
+      "off_rush_epa": -15.046302795410156,
+      "def_epa": -9.284210205078125,
+      "def_epa_per_play": -0.00634167343378067,
+      "def_pass_epa": -34.083168029785156,
+      "def_rush_epa": -7.031607627868652,
+      "plays_off": 1369,
+      "plays_def": 1464
+    },
+    "NYG": {
+      "off_epa": -116.70555877685547,
+      "off_epa_per_play": -0.08259417116641998,
+      "off_pass_epa": -55.502784729003906,
+      "off_rush_epa": -45.70142364501953,
+      "def_epa": -54.91551971435547,
+      "def_epa_per_play": -0.040055084973573685,
+      "def_pass_epa": -106.80567932128906,
+      "def_rush_epa": 31.08843231201172,
+      "plays_off": 1413,
+      "plays_def": 1371
+    },
+    "NYJ": {
+      "off_epa": -5.733091354370117,
+      "off_epa_per_play": -0.004281621426343918,
+      "off_pass_epa": 37.61015319824219,
+      "off_rush_epa": -36.77122497558594,
+      "def_epa": -68.02603149414062,
+      "def_epa_per_play": -0.048074934631586075,
+      "def_pass_epa": -74.01973724365234,
+      "def_rush_epa": 22.210058212280273,
+      "plays_off": 1339,
+      "plays_def": 1415
+    },
+    "PHI": {
+      "off_epa": 152.6786346435547,
+      "off_epa_per_play": 0.08543851971626282,
+      "off_pass_epa": 126.80413055419922,
+      "off_rush_epa": 38.11622619628906,
+      "def_epa": 117.53170776367188,
+      "def_epa_per_play": 0.07131778448820114,
+      "def_pass_epa": 38.544837951660156,
+      "def_rush_epa": 87.68890380859375,
+      "plays_off": 1787,
+      "plays_def": 1648
+    },
+    "PIT": {
+      "off_epa": 13.748588562011719,
+      "off_epa_per_play": 0.009270794689655304,
+      "off_pass_epa": 35.164363861083984,
+      "off_rush_epa": -62.26151657104492,
+      "def_epa": 16.55887222290039,
+      "def_epa_per_play": 0.011272206902503967,
+      "def_pass_epa": -23.005435943603516,
+      "def_rush_epa": 21.605220794677734,
+      "plays_off": 1483,
+      "plays_def": 1469
+    },
+    "SF": {
+      "off_epa": 31.74675941467285,
+      "off_epa_per_play": 0.023377584293484688,
+      "off_pass_epa": 90.29637145996094,
+      "off_rush_epa": -25.079246520996094,
+      "def_epa": -85.72020721435547,
+      "def_epa_per_play": -0.06416182965040207,
+      "def_pass_epa": -51.483924865722656,
+      "def_rush_epa": -2.8315038681030273,
+      "plays_off": 1358,
+      "plays_def": 1336
+    },
+    "SEA": {
+      "off_epa": -13.378011703491211,
+      "off_epa_per_play": -0.009548901580274105,
+      "off_pass_epa": 28.8339786529541,
+      "off_rush_epa": -45.63737487792969,
+      "def_epa": 14.456735610961914,
+      "def_epa_per_play": 0.01019515935331583,
+      "def_pass_epa": -23.247333526611328,
+      "def_rush_epa": 43.5706901550293,
+      "plays_off": 1401,
+      "plays_def": 1418
+    },
+    "TB": {
+      "off_epa": 151.734619140625,
+      "off_epa_per_play": 0.10204076766967773,
+      "off_pass_epa": 156.89430236816406,
+      "off_rush_epa": -2.194913864135742,
+      "def_epa": -19.15200424194336,
+      "def_epa_per_play": -0.012819279916584492,
+      "def_pass_epa": -85.10037231445312,
+      "def_rush_epa": 55.84529113769531,
+      "plays_off": 1487,
+      "plays_def": 1494
+    },
+    "TEN": {
+      "off_epa": -123.40991973876953,
+      "off_epa_per_play": -0.08916901797056198,
+      "off_pass_epa": -35.47119903564453,
+      "off_rush_epa": -74.87921142578125,
+      "def_epa": -50.52433395385742,
+      "def_epa_per_play": -0.03748096153140068,
+      "def_pass_epa": -67.13191223144531,
+      "def_rush_epa": 15.239866256713867,
+      "plays_off": 1384,
+      "plays_def": 1348
+    },
+    "WAS": {
+      "off_epa": 196.8203582763672,
+      "off_epa_per_play": 0.11449700593948364,
+      "off_pass_epa": 180.5523223876953,
+      "off_rush_epa": 5.294842720031738,
+      "def_epa": -94.75929260253906,
+      "def_epa_per_play": -0.058421265333890915,
+      "def_pass_epa": -83.610107421875,
+      "def_rush_epa": -6.559941291809082,
+      "plays_off": 1719,
+      "plays_def": 1622
+    }
+  },
+  "advanced_stats": {
+    "ARI": {
+      "pass_yards": 3859.0,
+      "rush_yards": 2105.0,
+      "pass_tds": 21.0,
+      "rush_tds": 18.0,
+      "turnovers": 32.0,
+      "sacks": 41.0,
+      "def_ints": 9.0,
+      "def_fumbles": 22.0,
+      "total_yards": 5964.0,
+      "total_tds": 39.0
+    },
+    "ATL": {
+      "pass_yards": 4283.0,
+      "rush_yards": 2212.0,
+      "pass_tds": 21.0,
+      "rush_tds": 18.0,
+      "turnovers": 42.0,
+      "sacks": 31.0,
+      "def_ints": 12.0,
+      "def_fumbles": 16.0,
+      "total_yards": 6495.0,
+      "total_tds": 39.0
+    },
+    "BAL": {
+      "pass_yards": 4618.0,
+      "rush_yards": 3201.0,
+      "pass_tds": 45.0,
+      "rush_tds": 24.0,
+      "turnovers": 25.0,
+      "sacks": 59.0,
+      "def_ints": 12.0,
+      "def_fumbles": 19.0,
+      "total_yards": 7819.0,
+      "total_tds": 69.0
+    },
+    "BUF": {
+      "pass_yards": 4574.0,
+      "rush_yards": 2322.0,
+      "pass_tds": 34.0,
+      "rush_tds": 38.0,
+      "turnovers": 21.0,
+      "sacks": 45.0,
+      "def_ints": 17.0,
+      "def_fumbles": 32.0,
+      "total_yards": 6896.0,
+      "total_tds": 72.0
+    },
+    "CAR": {
+      "pass_yards": 3411.0,
+      "rush_yards": 1595.0,
+      "pass_tds": 22.0,
+      "rush_tds": 18.0,
+      "turnovers": 32.0,
+      "sacks": 32.0,
+      "def_ints": 9.0,
+      "def_fumbles": 15.0,
+      "total_yards": 5006.0,
+      "total_tds": 40.0
+    },
+    "CHI": {
+      "pass_yards": 3552.0,
+      "rush_yards": 1356.0,
+      "pass_tds": 20.0,
+      "rush_tds": 13.0,
+      "turnovers": 29.0,
+      "sacks": 40.0,
+      "def_ints": 11.0,
+      "def_fumbles": 21.0,
+      "total_yards": 4908.0,
+      "total_tds": 33.0
+    },
+    "CIN": {
+      "pass_yards": 4918.0,
+      "rush_yards": 1382.0,
+      "pass_tds": 43.0,
+      "rush_tds": 11.0,
+      "turnovers": 32.0,
+      "sacks": 36.0,
+      "def_ints": 15.0,
+      "def_fumbles": 18.0,
+      "total_yards": 6300.0,
+      "total_tds": 54.0
+    },
+    "CLE": {
+      "pass_yards": 3879.0,
+      "rush_yards": 1393.0,
+      "pass_tds": 19.0,
+      "rush_tds": 8.0,
+      "turnovers": 41.0,
+      "sacks": 41.0,
+      "def_ints": 4.0,
+      "def_fumbles": 18.0,
+      "total_yards": 5272.0,
+      "total_tds": 27.0
+    },
+    "DAL": {
+      "pass_yards": 4092.0,
+      "rush_yards": 1650.0,
+      "pass_tds": 23.0,
+      "rush_tds": 6.0,
+      "turnovers": 41.0,
+      "sacks": 52.0,
+      "def_ints": 13.0,
+      "def_fumbles": 22.0,
+      "total_yards": 5742.0,
+      "total_tds": 29.0
+    },
+    "DEN": {
+      "pass_yards": 3967.0,
+      "rush_yards": 1598.0,
+      "pass_tds": 31.0,
+      "rush_tds": 12.0,
+      "turnovers": 27.0,
+      "sacks": 65.0,
+      "def_ints": 15.0,
+      "def_fumbles": 18.0,
+      "total_yards": 5565.0,
+      "total_tds": 43.0
+    },
+    "DET": {
+      "pass_yards": 5054.0,
+      "rush_yards": 2630.0,
+      "pass_tds": 40.0,
+      "rush_tds": 32.0,
+      "turnovers": 29.0,
+      "sacks": 37.0,
+      "def_ints": 16.0,
+      "def_fumbles": 21.0,
+      "total_yards": 7684.0,
+      "total_tds": 72.0
+    },
+    "GB": {
+      "pass_yards": 4151.0,
+      "rush_yards": 2435.0,
+      "pass_tds": 28.0,
+      "rush_tds": 24.0,
+      "turnovers": 33.0,
+      "sacks": 47.0,
+      "def_ints": 17.0,
+      "def_fumbles": 28.0,
+      "total_yards": 6586.0,
+      "total_tds": 52.0
+    },
+    "HOU": {
+      "pass_yards": 4479.0,
+      "rush_yards": 1887.0,
+      "pass_tds": 21.0,
+      "rush_tds": 17.0,
+      "turnovers": 32.0,
+      "sacks": 56.0,
+      "def_ints": 23.0,
+      "def_fumbles": 23.0,
+      "total_yards": 6366.0,
+      "total_tds": 38.0
+    },
+    "IND": {
+      "pass_yards": 3599.0,
+      "rush_yards": 2120.0,
+      "pass_tds": 20.0,
+      "rush_tds": 20.0,
+      "turnovers": 40.0,
+      "sacks": 36.0,
+      "def_ints": 16.0,
+      "def_fumbles": 19.0,
+      "total_yards": 5719.0,
+      "total_tds": 40.0
+    },
+    "JAX": {
+      "pass_yards": 3717.0,
+      "rush_yards": 1549.0,
+      "pass_tds": 19.0,
+      "rush_tds": 13.0,
+      "turnovers": 33.0,
+      "sacks": 34.0,
+      "def_ints": 6.0,
+      "def_fumbles": 9.0,
+      "total_yards": 5266.0,
+      "total_tds": 32.0
+    },
+    "KC": {
+      "pass_yards": 4725.0,
+      "rush_yards": 1643.0,
+      "pass_tds": 31.0,
+      "rush_tds": 19.0,
+      "turnovers": 30.0,
+      "sacks": 51.0,
+      "def_ints": 14.0,
+      "def_fumbles": 24.0,
+      "total_yards": 6368.0,
+      "total_tds": 50.0
+    },
+    "LAC": {
+      "pass_yards": 4143.0,
+      "rush_yards": 1636.0,
+      "pass_tds": 24.0,
+      "rush_tds": 17.0,
+      "turnovers": 23.0,
+      "sacks": 49.0,
+      "def_ints": 16.0,
+      "def_fumbles": 18.0,
+      "total_yards": 5779.0,
+      "total_tds": 41.0
+    },
+    "LAR": {
+      "pass_yards": 0.0,
+      "rush_yards": 0.0,
+      "pass_tds": 0.0,
+      "rush_tds": 0.0,
+      "turnovers": 0.0,
+      "sacks": 0.0,
+      "def_ints": 0.0,
+      "def_fumbles": 0.0,
+      "total_yards": 0.0,
+      "total_tds": 0.0
+    },
+    "LV": {
+      "pass_yards": 4117.0,
+      "rush_yards": 1253.0,
+      "pass_tds": 19.0,
+      "rush_tds": 10.0,
+      "turnovers": 36.0,
+      "sacks": 38.0,
+      "def_ints": 10.0,
+      "def_fumbles": 13.0,
+      "total_yards": 5370.0,
+      "total_tds": 29.0
+    },
+    "MIA": {
+      "pass_yards": 4036.0,
+      "rush_yards": 1621.0,
+      "pass_tds": 22.0,
+      "rush_tds": 12.0,
+      "turnovers": 38.0,
+      "sacks": 35.0,
+      "def_ints": 10.0,
+      "def_fumbles": 14.0,
+      "total_yards": 5657.0,
+      "total_tds": 34.0
+    },
+    "MIN": {
+      "pass_yards": 4624.0,
+      "rush_yards": 1743.0,
+      "pass_tds": 36.0,
+      "rush_tds": 9.0,
+      "turnovers": 33.0,
+      "sacks": 51.0,
+      "def_ints": 24.0,
+      "def_fumbles": 17.0,
+      "total_yards": 6367.0,
+      "total_tds": 45.0
+    },
+    "NE": {
+      "pass_yards": 3343.0,
+      "rush_yards": 1491.0,
+      "pass_tds": 18.0,
+      "rush_tds": 11.0,
+      "turnovers": 41.0,
+      "sacks": 28.0,
+      "def_ints": 7.0,
+      "def_fumbles": 23.0,
+      "total_yards": 4834.0,
+      "total_tds": 29.0
+    },
+    "NO": {
+      "pass_yards": 3730.0,
+      "rush_yards": 1767.0,
+      "pass_tds": 21.0,
+      "rush_tds": 15.0,
+      "turnovers": 26.0,
+      "sacks": 39.0,
+      "def_ints": 14.0,
+      "def_fumbles": 15.0,
+      "total_yards": 5497.0,
+      "total_tds": 36.0
+    },
+    "NYG": {
+      "pass_yards": 3521.0,
+      "rush_yards": 1554.0,
+      "pass_tds": 15.0,
+      "rush_tds": 13.0,
+      "turnovers": 35.0,
+      "sacks": 45.0,
+      "def_ints": 5.0,
+      "def_fumbles": 21.0,
+      "total_yards": 5075.0,
+      "total_tds": 28.0
+    },
+    "NYJ": {
+      "pass_yards": 4016.0,
+      "rush_yards": 1449.0,
+      "pass_tds": 31.0,
+      "rush_tds": 8.0,
+      "turnovers": 28.0,
+      "sacks": 43.0,
+      "def_ints": 7.0,
+      "def_fumbles": 25.0,
+      "total_yards": 5465.0,
+      "total_tds": 39.0
+    },
+    "PHI": {
+      "pass_yards": 4243.0,
+      "rush_yards": 3430.0,
+      "pass_tds": 29.0,
+      "rush_tds": 40.0,
+      "turnovers": 28.0,
+      "sacks": 57.0,
+      "def_ints": 19.0,
+      "def_fumbles": 41.0,
+      "total_yards": 7673.0,
+      "total_tds": 69.0
+    },
+    "PIT": {
+      "pass_yards": 3877.0,
+      "rush_yards": 1944.0,
+      "pass_tds": 23.0,
+      "rush_tds": 14.0,
+      "turnovers": 38.0,
+      "sacks": 41.0,
+      "def_ints": 17.0,
+      "def_fumbles": 22.0,
+      "total_yards": 5821.0,
+      "total_tds": 37.0
+    },
+    "SF": {
+      "pass_yards": 4424.0,
+      "rush_yards": 1850.0,
+      "pass_tds": 23.0,
+      "rush_tds": 17.0,
+      "turnovers": 41.0,
+      "sacks": 37.0,
+      "def_ints": 11.0,
+      "def_fumbles": 20.0,
+      "total_yards": 6274.0,
+      "total_tds": 40.0
+    },
+    "SEA": {
+      "pass_yards": 4379.0,
+      "rush_yards": 1383.0,
+      "pass_tds": 21.0,
+      "rush_tds": 17.0,
+      "turnovers": 37.0,
+      "sacks": 45.0,
+      "def_ints": 13.0,
+      "def_fumbles": 21.0,
+      "total_yards": 5762.0,
+      "total_tds": 38.0
+    },
+    "TB": {
+      "pass_yards": 4690.0,
+      "rush_yards": 2260.0,
+      "pass_tds": 43.0,
+      "rush_tds": 16.0,
+      "turnovers": 43.0,
+      "sacks": 47.0,
+      "def_ints": 7.0,
+      "def_fumbles": 25.0,
+      "total_yards": 6950.0,
+      "total_tds": 59.0
+    },
+    "TEN": {
+      "pass_yards": 3621.0,
+      "rush_yards": 1626.0,
+      "pass_tds": 22.0,
+      "rush_tds": 11.0,
+      "turnovers": 46.0,
+      "sacks": 32.0,
+      "def_ints": 11.0,
+      "def_fumbles": 18.0,
+      "total_yards": 5247.0,
+      "total_tds": 33.0
+    },
+    "WAS": {
+      "pass_yards": 4777.0,
+      "rush_yards": 2304.0,
+      "pass_tds": 34.0,
+      "rush_tds": 29.0,
+      "turnovers": 29.0,
+      "sacks": 48.0,
+      "def_ints": 11.0,
+      "def_fumbles": 29.0,
+      "total_yards": 7081.0,
+      "total_tds": 63.0
+    }
+  },
+  "head_to_head": {
+    "('ARI', 'BUF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BAL', 'KC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'NO')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CLE', 'DAL')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DEN', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('GB', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('HOU', 'IND')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('JAX', 'MIA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DET', 'LA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LAC', 'LV')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('MIN', 'NYG')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CIN', 'NE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NYJ', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CHI', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('TB', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('ATL', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BUF', 'MIA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CHI', 'HOU')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CIN', 'KC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CLE', 'JAX')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('GB', 'IND')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'LAC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ARI', 'LA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('BAL', 'LV')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DAL', 'NO')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NYG', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('NYJ', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DEN', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NE', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('MIN', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DET', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BAL', 'DAL')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'LV')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CHI', 'IND')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DEN', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ARI', 'DET')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('GB', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('HOU', 'MIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BUF', 'JAX')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'KC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LAC', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('MIA', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NE', 'NYJ')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CLE', 'NYG')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NO', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LA', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CIN', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BAL', 'BUF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CAR', 'CIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CLE', 'LV')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DAL', 'NYG')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('DEN', 'NYJ')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('HOU', 'JAX')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('KC', 'LAC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CHI', 'LA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('GB', 'MIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('NE', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'NO')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('PHI', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('IND', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DET', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('MIA', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ARI', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ARI', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('BAL', 'CIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('BUF', 'HOU')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'CHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CLE', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DAL', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('GB', 'LA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('IND', 'JAX')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('DEN', 'LV')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('MIA', 'NE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('KC', 'NO')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NYG', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('MIN', 'NYJ')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('ARI', 'GB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'CAR')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('BUF', 'NYJ')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CIN', 'NYG')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CLE', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DAL', 'DET')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('HOU', 'NE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('IND', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CHI', 'JAX')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DEN', 'LAC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('LV', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('SEA', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('NO', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('BAL', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BAL', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CIN', 'CLE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('DEN', 'NO')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DET', 'MIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('GB', 'HOU')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('KC', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ARI', 'LAC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LA', 'LV')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('IND', 'MIA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('JAX', 'NE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NYJ', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NYG', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('ATL', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BUF', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ARI', 'MIA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BAL', 'CLE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('BUF', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'DEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CHI', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DAL', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('GB', 'JAX')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('KC', 'LV')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('LA', 'MIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('LAC', 'NO')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NYG', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CIN', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DET', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ARI', 'CHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'DAL')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BAL', 'DEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DET', 'GB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('HOU', 'NYJ')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('IND', 'MIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('JAX', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CLE', 'LAC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LA', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CIN', 'LV')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NE', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('KC', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BUF', 'IND')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DEN', 'KC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('DET', 'HOU')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LA', 'MIA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('JAX', 'MIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CHI', 'NE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'NYG')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ARI', 'NYJ')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DAL', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('PIT', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('SF', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LAC', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'DEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BAL', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 3
+    },
+    "('CIN', 'LAC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CLE', 'NO')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CHI', 'GB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('DAL', 'HOU')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('IND', 'NYJ')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DET', 'JAX')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BUF', 'KC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('LA', 'NE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LV', 'MIA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('MIN', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('PHI', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 3
+    },
+    "('ARI', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('BAL', 'LAC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DAL', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('DET', 'IND')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'KC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CHI', 'MIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('LA', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CLE', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('GB', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NYG', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('HOU', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('ARI', 'MIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CHI', 'DET')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('CLE', 'DEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('IND', 'NE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'LAC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LA', 'NO')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('GB', 'MIA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BAL', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CIN', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('NYJ', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BUF', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('TEN', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'MIN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BUF', 'LA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CHI', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CIN', 'DAL')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('JAX', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('LV', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NO', 'NYG')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('MIA', 'NYJ')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('ATL', 'LV')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BAL', 'NYG')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BUF', 'DET')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CIN', 'TEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CAR', 'DAL')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('GB', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DEN', 'IND')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CLE', 'KC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('HOU', 'MIA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ARI', 'NE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('JAX', 'NYJ')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('PHI', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LAC', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('NO', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ARI', 'CAR')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('HOU', 'KC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('JAX', 'LV')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LA', 'NYJ')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('MIN', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BUF', 'NE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 2
+    },
+    "('GB', 'NO')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'NYG')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('MIA', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DAL', 'TB')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('ATL', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BAL', 'HOU')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CIN', 'DEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DET', 'SF')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('IND', 'NYG')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('KC', 'PIT')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LAC', 'NE')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('LV', 'NO')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CLE', 'MIA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('CHI', 'SEA')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('BUF', 'DEN')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('HOU', 'LAC')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('DET', 'WAS')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    },
+    "('KC', 'PHI')": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "games": 1
+    }
+  },
+  "playoff_teams": [
+    "HOU",
+    "NE",
+    "BUF",
+    "DEN",
+    "SF",
+    "SEA",
+    "LAR",
+    "CHI"
+  ],
+  "total_plays": 49492
+}
