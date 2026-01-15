@@ -109,12 +109,14 @@ export function InjuriesModal({ injuries = [] }: InjuriesModalProps) {
 
             {injuries.length === 0 && (
               <div className="text-center py-8">
-                <p className="text-slate-600">No injuries currently reported for playoff teams</p>
+                <p className="text-slate-600 mb-2">No major injuries currently reported for playoff teams</p>
+                <p className="text-xs text-slate-500">All teams appear healthy. Retired/inactive players excluded.</p>
               </div>
             )}
 
             <div className="bg-blue-50 p-3 rounded-lg border border-blue-200 text-xs text-slate-600">
-              <strong>Data Source:</strong> Updated daily from ESPN. For real-time updates, visit <a href="https://www.espn.com/nfl/injuries" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">ESPN Injury Report</a>.
+              <p className="mb-1"><strong>Status Types:</strong> <strong>Out</strong> (will not play) • <strong>Doubtful</strong> (unlikely to play) • <strong>Questionable</strong> (game-time decision) • <strong>IR</strong> (season-ending)</p>
+              <p><strong>Data Source:</strong> Auto-updated from ESPN with retired/inactive players filtered. For real-time updates, visit <a href="https://www.espn.com/nfl/injuries" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">ESPN.com/nfl/injuries</a></p>
             </div>
           </div>
         </DialogContent>
